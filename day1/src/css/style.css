@@ -1,0 +1,107 @@
+:root {
+  --primaryColor: #22181c;
+  --accentColor: #ef626c;
+  --whiteColor: #e6e8ea;
+  --whiteDimmed: rgba(255, 255, 255, 0.6);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  background-color: var(--primaryColor);
+}
+
+.wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: grid;
+}
+
+/* Navbar */
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  box-sizing: border-box;
+  padding: 1em;
+  align-items: center;
+}
+
+.brand {
+  color: var(--accentColor);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 3.5em;
+  letter-spacing: 0.9;
+}
+
+.nav-items {
+  grid-column: 1 / 3;
+}
+
+.nav-item {
+  padding: 0.7em 0;
+  /* background-color: #f1f1f1; */
+  padding: 1em 0;
+  display: none;
+}
+
+.nav-link {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: var(--whiteColor);
+  font-size: 1.2em;
+  font-weight: 500;
+  padding-bottom: 0.3em;
+}
+
+.nav-item .active {
+  border-bottom: solid 3px var(--accentColor);
+}
+
+/* Align Toggler to Right */
+.toggler {
+  justify-self: end;
+  font-size: 2em;
+  color: var(--accentColor);
+}
+
+/* Hero */
+#hero {
+  width: 100%;
+  height: 600px;
+  display: grid;
+  align-content: center;
+  padding: 0 1em;
+  line-height: 3em;
+}
+/* Global */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.subtitle,
+.subheading {
+  color: var(--whiteDimmed);
+  padding: 0;
+  margin: 0;
+}
+
+.h2 {
+  color: #ffffff;
+  font-size: 2em;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0.9;
+}
