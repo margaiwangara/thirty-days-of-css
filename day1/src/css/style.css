@@ -3,6 +3,10 @@
   --accentColor: #ef626c;
   --whiteColor: #e6e8ea;
   --whiteDimmed: rgba(255, 255, 255, 0.6);
+  --remToPx: 0.0625rem;
+  --fontSizeSm: 20px;
+  --fontSizeMd: 28px;
+  --fontSizeXLg: 50px;
 }
 
 body {
@@ -11,7 +15,7 @@ body {
   max-width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1em;
   background-color: var(--primaryColor);
 }
@@ -20,19 +24,38 @@ body {
   width: 100%;
   overflow-x: hidden;
   min-height: 100vh;
-  display: grid;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Navbar */
+/* Grid Areas */
+.brand {
+  grid-area: navbar-brand;
+}
+
+.toggler {
+  grid-area: navbar-toggler;
+}
+
+.nav-items {
+  grid-area: navbar-items;
+  display: none;
+}
+
 .navbar {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
+  height: 10vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: minmax(10vh, auto);
+  grid-template-areas:
+    "navbar-brand navbar-toggler"
+    "navbar-items navbar-items";
   box-sizing: border-box;
-  padding: 1em;
   align-items: center;
+  padding: 0 1.2rem;
 }
 
 .brand {
@@ -40,19 +63,14 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 3.5em;
   letter-spacing: 0.9;
-}
-
-.nav-items {
-  grid-column: 1 / 3;
+  font-size: 48px;
 }
 
 .nav-item {
   padding: 0.7em 0;
   /* background-color: #f1f1f1; */
   padding: 1em 0;
-  display: none;
 }
 
 .nav-link {
