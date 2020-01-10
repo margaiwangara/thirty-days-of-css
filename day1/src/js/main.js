@@ -35,9 +35,29 @@ function toggleNavbar() {
   });
 }
 
+function toggleTabs() {
+  const tabs = document.querySelectorAll(".tab-link");
+
+  if (!tabs) return;
+
+  tabs.forEach(function(tab) {
+    tab.addEventListener("click", function(e) {
+      e.preventDefault();
+
+      // remove all active classes from others and add to yours
+      tabs.forEach(
+        value =>
+          value.classList.contains("active") && value.classList.remove("active")
+      );
+
+      // add active class to clicked
+      e.target.classList.add("active");
+    });
+  });
+}
 // DOMContentLoaded
 document.addEventListener("DOMContentLoaded", function() {
   // toggle navbar
   toggleNavbar();
-  console.log("DOMContentLoaded");
+  toggleTabs();
 });
