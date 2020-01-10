@@ -166,7 +166,6 @@ img {
 
 #section-b {
   display: flex;
-  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
@@ -176,6 +175,20 @@ img {
 #section-b > .content {
   text-align: center;
 }
+
+/* Section C */
+#section-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 1rem;
+}
+
+#section-c .content {
+  text-align: center;
+}
+
 /* Global */
 ul {
   list-style-type: none;
@@ -274,4 +287,22 @@ ul {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(50px, 1fr));
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab-link {
+  text-decoration: none;
+  color: var(--whiteDimmed);
+
+  padding: 0.5rem 0;
+}
+
+.tab-link.active {
+  border-bottom: solid 3px var(--accentColor);
 }
