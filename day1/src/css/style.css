@@ -42,10 +42,11 @@ body {
   grid-area: navbar-items;
   background-color: var(--primaryColor);
   display: none;
+  flex-direction: column;
 }
 
 .nav-items.active {
-  display: block;
+  display: flex;
 }
 
 .navbar {
@@ -76,9 +77,8 @@ body {
 }
 
 .nav-item {
-  padding: 0.7em 0;
   /* background-color: #f1f1f1; */
-  padding: 1em 0;
+  padding: 1rem 0;
 }
 
 .nav-link {
@@ -90,9 +90,9 @@ body {
   padding-bottom: 0.3em;
 }
 
-/* .nav-item .active {
+.nav-link.active {
   border-bottom: solid 3px var(--accentColor);
-} */
+}
 
 /* Align Toggler to Right */
 .toggler {
