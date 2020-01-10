@@ -41,12 +41,14 @@ body {
 .nav-items {
   grid-area: navbar-items;
   background-color: var(--primaryColor);
-  display: none;
   flex-direction: column;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.25s ease-in-out;
 }
 
 .nav-items.active {
-  display: flex;
+  transform: scaleY(1);
 }
 
 .navbar {
