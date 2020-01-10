@@ -40,7 +40,12 @@ body {
 
 .nav-items {
   grid-area: navbar-items;
+  background-color: var(--primaryColor);
   display: none;
+}
+
+.nav-items.active {
+  display: block;
 }
 
 .navbar {
@@ -55,6 +60,9 @@ body {
     "navbar-items navbar-items";
   box-sizing: border-box;
   align-items: center;
+}
+
+.navbar > * {
   padding: 0 1.2rem;
 }
 
@@ -82,9 +90,9 @@ body {
   padding-bottom: 0.3em;
 }
 
-.nav-item .active {
+/* .nav-item .active {
   border-bottom: solid 3px var(--accentColor);
-}
+} */
 
 /* Align Toggler to Right */
 .toggler {
